@@ -1,0 +1,9 @@
+# Derived and runtime files - never commit these
+__pycache__/
+*.pyc
+workspace/Memory/index/
+workspace/Maintenance/backup_log.txt
+workspace/Maintenance/cleanup_log.txt
+# Secrets never enter a repository
+.env
+*.env

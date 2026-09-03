@@ -1,0 +1,19 @@
+{
+  "_comment": "The one config file. Scripts find the workspace root by walking up from their own location to the folder containing this file. Paths below may be absolute or relative to the workspace root.",
+  "backup": {
+    "_comment": "Destinations are dated-folder roots, e.g. 'D:/Backups/workspace-daily'. null disables that tier. Retention counts dated FOLDERS by name, never by filesystem timestamp.",
+    "daily_dest": null,
+    "daily_keep": 10,
+    "weekly_dest": null,
+    "weekly_keep": 5,
+    "exclude_dirs": ["__pycache__", ".git", "node_modules"],
+    "daily_exclude_dirs": ["Quarantine"]
+  },
+  "cleanup": {
+    "cooling_days": 14,
+    "rearm_days": 14,
+    "require_backup": true,
+    "_comment": "require_backup: refuse to delete in a week whose weekly backup has not landed. Set false only if you run no backups at all."
+  },
+  "sanitize_terms_file": null
+}

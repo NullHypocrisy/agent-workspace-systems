@@ -1,0 +1,24 @@
+{
+  "_comment": "Tenant registry. Paths are relative to the workspace root. cap_chars is the working-memory size cap. scopes are folders+globs the indexer covers for this tenant.",
+  "global": {
+    "working_memory": "Memory/global/working-memory.md",
+    "cap_chars": 2000,
+    "core_profile": "Memory/global/core-profile.md",
+    "core_profile_cap_chars": 4000,
+    "scopes": [
+      {"root": "Memory/global", "include": ["working-memory.md", "core-profile.md", "logs/*.md"]},
+      {"root": ".", "include": ["*.md"]},
+      {"root": "Skills", "include": ["*.md"]},
+      {"root": "Work Items", "include": ["*.md", "completed/*.md"]}
+    ]
+  },
+  "tenants": {
+    "example-project": {
+      "working_memory": "Memory/example-project/working-memory.md",
+      "cap_chars": 4000,
+      "scopes": [
+        {"root": "Memory/example-project", "include": ["working-memory.md", "logs/*.md"]}
+      ]
+    }
+  }
+}
